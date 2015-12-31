@@ -44,3 +44,8 @@ from distutils.command.install import install
 if sys.version_info[:2] < (2, 6):
     sys.stderr.write('ANKdb®: Python 2.5 and older is not supported!\n')
     sys.exit()
+
+# A:2 - JavaOS Support Information.
+if os.name == 'java':
+    sys.stderr.write('ANKdb®: JavaOS is not supported!\n')
+    sys.exit()
