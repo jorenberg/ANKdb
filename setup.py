@@ -32,3 +32,4 @@ __license__     = 'Apache License'
 import os
 import sys
 import platform
+import errno
