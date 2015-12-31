@@ -79,3 +79,12 @@ if [int(dgt) for dgt in scipy.__version__.split('.')[:2]] < [0, 4]:
 # ================================= ANKdb® ===============================
 # A:5 - ANKdb® Information.
 __version__ 	= '1.0.0'
+
+with open('ankdb/__init__.py') as inp:
+    for line in inp:
+        if line.startswith('__version__'):
+            exec(line.strip())
+            break
+
+with open('docs/README.rst') as inp:
+    long_description = inp.read()
