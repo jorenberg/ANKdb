@@ -39,3 +39,8 @@ from os.path import isfile, join
 from distutils.core import setup
 from distutils.extension import Extension
 from distutils.command.install import install
+
+# A:1 - Python Version Information.
+if sys.version_info[:2] < (2, 6):
+    sys.stderr.write('ANKdb®: Python 2.5 and older is not supported!\n')
+    sys.exit()
